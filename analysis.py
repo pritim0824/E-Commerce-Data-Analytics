@@ -52,13 +52,16 @@ print("Mean:", df['TotalPrice'].mean())
 print("Median:", df['TotalPrice'].median())
 print("Count:", df['TotalPrice'].count())
 
+
+# ---------------------------------------
+# Product-wise Order Count
+# ---------------------------------------
+
 print("\n--- Product-wise Order Count ---")
 
 product_counts = df['Product'].value_counts()
 
 print(product_counts)
-
-# Product-wise Bar Chart
 
 plt.figure(figsize=(10, 6))
 
@@ -70,15 +73,19 @@ plt.ylabel('Number of Orders')
 plt.xticks(rotation=45)
 
 plt.tight_layout()
+plt.savefig("product_analysis.png", dpi=300, bbox_inches="tight")
 plt.show()
+
+
+# ---------------------------------------
+# Payment Method Analysis
+# ---------------------------------------
 
 print("\n--- Orders by Payment Method ---")
 
 payment_counts = df['PaymentMethod'].value_counts()
 
 print(payment_counts)
-
-# Payment Method Bar Chart
 
 plt.figure(figsize=(8, 5))
 
@@ -90,15 +97,19 @@ plt.ylabel('Number of Orders')
 plt.xticks(rotation=0)
 
 plt.tight_layout()
+plt.savefig("payment_method.png", dpi=300, bbox_inches="tight")
 plt.show()
+
+
+# ---------------------------------------
+# Order Status Analysis
+# ---------------------------------------
 
 print("\n--- Orders by Order Status ---")
 
 status_counts = df['OrderStatus'].value_counts()
 
 print(status_counts)
-
-# Order Status Bar Chart
 
 plt.figure(figsize=(8, 5))
 
@@ -110,9 +121,13 @@ plt.ylabel('Number of Orders')
 plt.xticks(rotation=0)
 
 plt.tight_layout()
+plt.savefig("order_status.png", dpi=300, bbox_inches="tight")
 plt.show()
 
+
+# ---------------------------------------
 # Total Price Distribution
+# ---------------------------------------
 
 plt.figure(figsize=(10, 5))
 
@@ -123,9 +138,13 @@ plt.xlabel('Total Price')
 plt.ylabel('Number of Orders')
 
 plt.tight_layout()
+plt.savefig("total_price_distribution.png", dpi=300, bbox_inches="tight")
 plt.show()
 
+
+# ---------------------------------------
 # Total Price Box Plot
+# ---------------------------------------
 
 plt.figure(figsize=(10, 5))
 
@@ -135,9 +154,13 @@ plt.title('Box Plot of Total Price')
 plt.xlabel('Total Price')
 
 plt.tight_layout()
+plt.savefig("total_price_boxplot.png", dpi=300, bbox_inches="tight")
 plt.show()
 
+
+# ---------------------------------------
 # Outlier Calculation using IQR
+# ---------------------------------------
 
 Q1 = df['TotalPrice'].quantile(0.25)
 Q3 = df['TotalPrice'].quantile(0.75)
@@ -160,6 +183,11 @@ print("Lower Bound:", lower_bound)
 print("Upper Bound:", upper_bound)
 print("Number of Outliers:", len(outliers))
 
+
+# ---------------------------------------
+# Referral Source Analysis
+# ---------------------------------------
+
 print("\n--- Orders by Referral Source ---")
 
 referral_counts = df['ReferralSource'].value_counts()
@@ -176,9 +204,13 @@ plt.ylabel('Number of Orders')
 plt.xticks(rotation=45)
 
 plt.tight_layout()
+plt.savefig("referral_source.png", dpi=300, bbox_inches="tight")
 plt.show()
 
+
+# ---------------------------------------
 # Date-wise Order Trend
+# ---------------------------------------
 
 df['Date'] = pd.to_datetime(df['Date'])
 
@@ -196,9 +228,13 @@ plt.xlabel('Date')
 plt.ylabel('Number of Orders')
 
 plt.tight_layout()
+plt.savefig("order_trend.png", dpi=300, bbox_inches="tight")
 plt.show()
 
+
+# ---------------------------------------
 # Total Sales Analysis
+# ---------------------------------------
 
 total_sales = df['TotalPrice'].sum()
 average_order_value = df['TotalPrice'].mean()
