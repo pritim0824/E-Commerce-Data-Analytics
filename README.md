@@ -141,12 +141,13 @@ These high-value orders were identified as potential outliers but were not autom
 
 ```bash
 git clone https://github.com/pritim0824/E-Commerce-Data-Analytics.git
+```
 
 ### 2. Install the required libraries
 
 ```bash
 python -m pip install -r requirements.txt
-
+```
 
 ## 📊 Visual Analysis
 
