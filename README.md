@@ -149,6 +149,12 @@ git clone https://github.com/pritim0824/E-Commerce-Data-Analytics.git
 python -m pip install -r requirements.txt
 ```
 
+### 3. Run the analysis
+
+```bash
+python analysis.py
+```
+
 ## 📊 Visual Analysis
 
 ### Product Analysis
