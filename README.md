@@ -146,3 +146,27 @@ git clone https://github.com/pritim0824/E-Commerce-Data-Analytics.git
 
 ```bash
 python -m pip install -r requirements.txt
+
+
+## 📊 Visual Analysis
+
+### Product Analysis
+![Product Analysis](product_analysis.png)
+
+### Payment Method Analysis
+![Payment Method Analysis](payment_method.png)
+
+### Order Status Analysis
+![Order Status](order_status.png)
+
+### Referral Source Analysis
+![Referral Source](referral_source.png)
+
+### Order Trend
+![Order Trend](order_trend.png)
+
+### Total Price Distribution
+![Total Price Distribution](total_price_distribution.png)
+
+### Total Price Box Plot
+![Total Price Box Plot](total_price_boxplot.png)
